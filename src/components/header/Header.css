@@ -1,0 +1,42 @@
+.h-header {
+  width: 100vw;
+  height: 10vh;
+  background-color: black;
+  color: white;
+}
+
+.h-menu {
+  width: 50vw;
+  height: 10vh;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.h-marca {
+  display: flex;
+  align-items: center;
+}
+
+.h-marca img {
+  width: 50px;
+  height: 50px;
+}
+
+.h-nav {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  align-items: center;
+  height: 10vh;
+}
+
+.h-nav li {
+  padding: 15px;
+}
+
+.h-nav li:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}

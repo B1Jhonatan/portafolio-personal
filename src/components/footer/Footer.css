@@ -1,0 +1,11 @@
+.f-footer {
+  width: 100vw;
+  background-color: black;
+  color: white;
+}
+.f-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 50vw;
+  margin: auto;
+}
