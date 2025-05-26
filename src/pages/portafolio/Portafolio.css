@@ -35,7 +35,12 @@
 
 .s-t-iconos {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  padding-bottom: 30px;
+}
+.s-t-iconos {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .s-t-iconos div {
@@ -67,6 +72,7 @@
 
 .s-p-proyecto {
   width: 20vw;
-  height: 40vh;
-  background-color: aquamarine;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: rgb(10, 10, 20);
 }
