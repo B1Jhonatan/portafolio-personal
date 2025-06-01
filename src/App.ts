@@ -1,14 +1,24 @@
 const app = document.querySelector<HTMLDivElement>("#app");
-const url = window.location.href;
 
-const root: string = "http://localhost:5173/";
+const url = window.location.href;
+const hashUrl = window.location.hash;
+
+const roots: string[] = [
+  "http://localhost:5173/",
+  "http://localhost:5173/#perfil",
+  "http://localhost:5173/#contacto",
+  "http://localhost:5173/#tecnologias",
+  "http://localhost:5173/#proyectos",
+  "http://localhost:5173/#habilidades",
+];
+
 const proyecto: string = "http://localhost:5173/proyecto-front";
 
 let fetchUrl: string;
 
 function asignarUrl(): string {
-  if (url === root) {
-    fetchUrl = "/src/pages/portafolio/Portafolio.html";
+  if (roots.includes(url)) {
+    fetchUrl = `/src/pages/portafolio/Portafolio.html${hashUrl}`;
   } else if (url === proyecto) {
     fetchUrl = "/src/pages/proyecto/Proyecto-front.html";
   }

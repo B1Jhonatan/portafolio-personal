@@ -17,11 +17,7 @@
 }
 
 .s-resumen {
-  width: 400px;
-  align-content: center;
-}
-
-.s-resumen {
+  width: 100%;
   text-align: justify;
 }
 
