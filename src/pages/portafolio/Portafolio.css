@@ -6,19 +6,25 @@
 
 .s-perfil {
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
   height: 100vh;
 }
 
 .s-imagen {
-  width: 20vw;
-  height: 20vw;
+  padding-left: 25px;
+  width: 320px;
+  height: 320px;
 }
 
 .s-resumen {
-  width: 100%;
   text-align: justify;
+  padding-right: 25px;
+}
+
+.s-resumen h1,
+h3 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .s-tecnologias {
