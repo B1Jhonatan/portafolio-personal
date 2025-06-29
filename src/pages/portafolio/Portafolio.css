@@ -1,24 +1,34 @@
 .s-contenido {
   width: 50vw;
+  min-width: 400px;
   margin: auto;
+  box-shadow: 0px 0px 5px rgb(66, 66, 66);
   background-color: rgb(0, 0, 0, 0.1);
 }
 
 .s-perfil {
   display: flex;
-  align-items: center;
-  height: 100vh;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  min-height: 100vh;
+  align-content: center;
+}
+
+.d-img {
+  width: 350px;
 }
 
 .s-imagen {
-  padding-left: 25px;
-  width: 320px;
-  height: 320px;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  border: 5px solid black;
+  box-shadow: 0px 0px 5px gray;
 }
 
 .s-resumen {
   text-align: justify;
-  padding-right: 25px;
+  width: 350px;
 }
 
 .s-resumen h1,
@@ -29,26 +39,26 @@ h3 {
 
 .s-tecnologias {
   text-align: center;
+  min-height: 100vh;
+  align-content: center;
 }
 
 .s-t-titulo {
-  padding: 30px;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 .s-t-iconos {
   display: flex;
-  justify-content: space-evenly;
-  padding-bottom: 30px;
-}
-.s-t-iconos {
-  display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
 .s-t-iconos div {
   width: 90px;
   height: 90px;
-  font-weight: bold;
+  padding: 20px;
+  font-weight: 800;
   text-align: center;
 }
 
@@ -60,21 +70,26 @@ h3 {
 .s-proyectos {
   align-content: center;
   text-align: center;
-  height: 100vh;
-}
-
-.s-p-titulo {
-  padding: 30px;
+  min-height: 100vh;
 }
 
 .s-p-proyectos {
   display: flex;
+  flex-wrap: wrap;
+  align-content: center;
   justify-content: space-evenly;
 }
 
 .s-p-proyecto {
   width: 20vw;
+  min-width: 300px;
   padding: 15px;
-  border-radius: 15px;
+  border-radius: 10px;
   background-color: rgb(10, 10, 20);
+}
+
+.s-habilidades {
+  text-align: center;
+  align-content: center;
+  min-height: 100vh;
 }
