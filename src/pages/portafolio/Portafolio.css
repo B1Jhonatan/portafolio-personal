@@ -129,3 +129,21 @@ h3 {
 .s-h-lista-h p {
   width: 200px;
 }
+
+.s-contain-cv {
+  min-height: 20vh;
+  align-content: center;
+  text-align: center;
+}
+
+.s-cv {
+  border: 1px solid white;
+  align-content: center;
+  border-radius: 5px;
+}
+
+.s-cv:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
