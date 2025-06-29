@@ -93,3 +93,39 @@ h3 {
   align-content: center;
   min-height: 100vh;
 }
+
+.s-h-lista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.s-h-frag {
+  width: 210px;
+  margin: 20px;
+}
+
+.s-h-frag p {
+  margin-bottom: 20px;
+}
+
+.s-h-frag a {
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+.s-h-blandas {
+  padding-top: 100px;
+  padding-bottom: 20px;
+}
+
+.s-h-lista-h {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+.s-h-lista-h p {
+  width: 200px;
+}
