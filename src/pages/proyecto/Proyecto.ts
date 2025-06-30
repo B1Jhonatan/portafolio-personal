@@ -1,9 +1,9 @@
 import "./Portafolio.css";
 
-const portafolioPage = document.querySelector<HTMLDivElement>("#portafolio");
+const portafolioPage = document.querySelector<HTMLDivElement>("#app");
 
 if (portafolioPage) {
-  fetch("/components-static/portafolio-static/Portafolio.html")
+  fetch("/components-static/proyecto-static/Portafolio.html")
     .then((response) => {
       if (!response.ok) {
         throw new Error("No se pudo cargar el header");
