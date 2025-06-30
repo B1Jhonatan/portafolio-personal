@@ -3,7 +3,7 @@ import "./Portafolio.css";
 const portafolioPage = document.querySelector<HTMLDivElement>("#portafolio");
 
 if (portafolioPage) {
-  fetch("/src/pages/portafolio/Portafolio.html")
+  fetch("/components-static/portafolio-static/Portafolio.html")
     .then((response) => {
       if (!response.ok) {
         throw new Error("No se pudo cargar el header");

@@ -1,7 +1,7 @@
 const footerContainer = document.querySelector<HTMLDivElement>("#footer");
 
 if (footerContainer) {
-  fetch("/src/components/footer/Footer.html")
+  fetch("/components-static/footer-static/Footer.html")
     .then((response) => {
       if (!response.ok) {
         throw new Error("No se pudo cargar el header");

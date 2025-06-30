@@ -1,7 +1,7 @@
 const headerContainer = document.querySelector<HTMLDivElement>("#header");
 
 if (headerContainer) {
-  fetch("/src/components/header/Header.html")
+  fetch("/components-static/header-static/Header.html")
     .then((response) => {
       if (!response.ok) {
         throw new Error("No se pudo cargar el header");
