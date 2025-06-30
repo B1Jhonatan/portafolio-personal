@@ -1,6 +1,6 @@
 import "./Portafolio.css";
 
-const portafolioPage = document.querySelector<HTMLDivElement>("#app");
+const portafolioPage = document.querySelector<HTMLDivElement>("#portafolio");
 
 if (portafolioPage) {
   fetch("/components-static/proyecto-static/Portafolio.html")

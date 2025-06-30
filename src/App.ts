@@ -13,7 +13,7 @@ const roots: string[] = [
   "/#habilidades",
 ];
 
-const proyecto = "/proyecto-fullstack";
+const proyecto: string = "/proyecto-fullstack";
 
 function asignarUrl(): string {
   if (roots.includes(pathWithHash)) {
