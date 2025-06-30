@@ -1,28 +1,28 @@
 const app = document.querySelector<HTMLDivElement>("#app");
 
-const url = window.location.href;
-const hashUrl = window.location.hash;
+const currentOrigin = window.location.origin;
+const currentPath = window.location.pathname;
+const currentHash = window.location.hash;
+const pathWithHash = `${currentPath}${currentHash}`;
 
 const roots: string[] = [
-  "http://localhost:5173/",
-  "http://localhost:5173/#perfil",
-  "http://localhost:5173/#contacto",
-  "http://localhost:5173/#tecnologias",
-  "http://localhost:5173/#proyectos",
-  "http://localhost:5173/#habilidades",
+  "/",
+  "/#perfil",
+  "/#contacto",
+  "/#tecnologias",
+  "/#proyectos",
+  "/#habilidades",
 ];
 
-const proyecto: string = "http://localhost:5173/proyecto-front";
-
-let fetchUrl: string;
+const proyecto = "/proyecto-front";
 
 function asignarUrl(): string {
-  if (roots.includes(url)) {
-    fetchUrl = `/src/pages/portafolio/Portafolio.html${hashUrl}`;
-  } else if (url === proyecto) {
-    fetchUrl = "/src/pages/proyecto/Proyecto-front.html";
+  if (roots.includes(pathWithHash)) {
+    return `/src/pages/portafolio/Portafolio.html${currentHash}`;
+  } else if (currentPath === proyecto) {
+    return "/src/pages/proyecto/Proyecto-front.html";
   }
-  return fetchUrl;
+  return "";
 }
 
 if (app) {
@@ -35,6 +35,13 @@ if (app) {
     })
     .then((html: any) => {
       app.innerHTML = html;
+
+      setTimeout(() => {
+        const targetElement = document.querySelector(currentHash);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 50);
     })
     .catch((error: any) => {
       console.error("Error al cargar el HTML:", error);
