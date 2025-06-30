@@ -1,6 +1,5 @@
 const app = document.querySelector<HTMLDivElement>("#app");
 
-const currentOrigin = window.location.origin;
 const currentPath = window.location.pathname;
 const currentHash = window.location.hash;
 const pathWithHash = `${currentPath}${currentHash}`;
@@ -14,7 +13,7 @@ const roots: string[] = [
   "/#habilidades",
 ];
 
-const proyecto = "/proyecto-front";
+const proyecto = "/proyecto-fullstack";
 
 function asignarUrl(): string {
   if (roots.includes(pathWithHash)) {

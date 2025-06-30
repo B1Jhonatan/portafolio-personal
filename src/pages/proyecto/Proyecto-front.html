@@ -1,9 +1,88 @@
-<div class="p-contenido">
-  <h1>Proyectos</h1>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eveniet quae
-    enim officia earum similique numquam sequi, aliquam nemo molestiae eaque vel
-    sapiente voluptate. Voluptatum unde saepe distinctio minus nemo!
-  </p>
+<section class="p-contenido">
+  <div class="p-page-redirect">
+    <h1>Sitio Web del proyecto</h1>
+    <br /><br />
+    <a href="https://encode-decode-page.onrender.com/" target="_blank">
+      Ir al sitio web</a
+    >
+  </div>
+  <div class="p-page-description">
+    <h1>Descripcion del proyecto</h1>
+    <br />
+    <h3>Frontend</h3>
+    <br />
+    <p>
+      El proyecto consiste en una aplicación web con un frontend minimalista
+      construido con Vite como herramienta de empaquetado. La interfaz presenta
+      un formulario sencillo que permite a los usuarios ingresar datos, los
+      cuales son enviados al backend para su procesamiento.
+      <br />
+      <br />
+      El backend recibe esta información, la procesa mediante un algoritmo de
+      encriptación, y devuelve como respuesta el código encriptado
+      correspondiente. La arquitectura sigue un enfoque cliente-servidor básico
+      pero efectivo, donde el frontend se encarga de la interacción con el
+      usuario y el backend maneja la lógica de encriptación.
+      <br /><br />
+      La elección de Vite como bundler asegura un desarrollo ágil y un build
+      optimizado para producción, ofreciendo tiempos de compilación rápidos y un
+      rendimiento eficiente en el lado del cliente.
+    </p>
+    <br />
+    <img src="../public/img-site-org.png" alt="img-project" />
+    <br />
+    <br />
+    <h3>Backend</h3>
+    <br />
+    <p>
+      Implementa un API REST con dos endpoints para encriptar/desencriptar
+      datos, configurado con CORS restrictivo (solo permite solicitudes desde el
+      frontend del proyecto).
+      <br /><br />
+      - Tecnologías: Java 17 + Spring Boot 3.x
+      <br /><br />
+      - Spring Web (MVC)
+      <br /><br />
+      - Lógica personalizada de encriptación.
+      <br /><br />
+      - Despliegue en docker.
+      <br /><br />
+      <strong>Características clave: </strong>
+      <br /><br />
+      ✅ Seguridad básica: CORS configurado para evitar solicitudes cruzadas no
+      autorizadas.
+      <br /><br />
+      ✅ Escalable: La lógica de encriptación puede reemplazarse (ej: por AES +
+      salting).
+      <br /><br />
+      ✅ Contenedorizado: Listo para despliegue en Docker (si incluyes un
+      Dockerfile).
+    </p>
+    <br />
+    <br />
+    <p><strong>Configuracion CORS</strong></p>
+    <br />
+    <img src="../public/img-site-code.png" alt="img-cors" />
+    <p>
+      La restriccion de los cors ya que solo se permite el acceso a este backend
+      desde un unico sitio web.
+    </p>
+    <br />
+    <p><strong>Wake up</strong></p>
+    <br />
+    <img src="../public/img-site-wake.png" alt="img-wake-up" />
+    <p>
+      Endpoint para llamar al backend debido a que esta en un servicio gratuito
+      de hosting y este entra en sleep despues de 15 min. de inactividad.
+    </p>
+    <br />
+    <p><strong>Endpoints del backend</strong></p>
+    <br />
+    <img src="../public/img-site-endp.png" alt="img-endpoint" />
+    <p>
+      El backend cuenta con dos endpoints uno que encripta palabras y otro que
+      desencripta las palabras encriptadas.
+    </p>
+  </div>
   <link rel="stylesheet" href="/src/pages/proyecto/Proyecto-front.css" />
-</div>
+</section>

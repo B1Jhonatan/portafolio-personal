@@ -1,5 +1,22 @@
 .p-contenido {
-  display: grid;
-  height: 100vh;
-  align-items: center;
+  width: 50vw;
+  min-width: 400px;
+  margin: auto;
+  box-shadow: 0px 0px 5px rgb(66, 66, 66);
+  background-color: rgb(0, 0, 0, 0.1);
+}
+
+.p-page-redirect {
+  height: 50vh;
+  width: calc(100% - 40px);
+  align-content: center;
+  text-align: center;
+  margin: auto;
+}
+
+.p-page-description {
+  min-height: 100vh;
+  width: calc(100% - 40px);
+  text-align: justify;
+  margin: auto;
 }
