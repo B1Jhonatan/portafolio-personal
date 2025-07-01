@@ -13,52 +13,36 @@ const roots: string[] = [
   "/#habilidades",
 ];
 
-const proyecto: string = "/#proyecto-fullstack";
+const proyecto: string = "/proyecto-fullstack";
 
 function asignarUrl(): string {
   if (roots.includes(pathWithHash)) {
-    return `./components-static/portafolio-static/Portafolio.html${currentHash}`;
+    return `/components-static/portafolio-static/Portafolio.html${currentHash}`;
   } else if (pathWithHash === proyecto) {
-    return "./components-static/proyecto-static/Proyecto-front.html";
+    return "/components-static/proyecto-static/Proyecto-front.html";
   }
   return "";
 }
-console.log(asignarUrl());
 
 if (app) {
-  if (
-    asignarUrl() === "./components-static/proyecto-static/Proyecto-front.html"
-  ) {
-    fetch(asignarUrl())
-      .then((response: any) => {
-        return response.text();
-      })
-      .then((html: any) => {
-        app.innerHTML = html;
-      })
-      .catch((error: any) => {
-        console.error("Error al cargar el HTML:", error);
-      });
-  } else {
-    fetch(asignarUrl())
-      .then((response: any) => {
-        if (!response.ok) {
-          throw new Error("No se pudo cargar el HTML");
-        }
-        return response.text();
-      })
-      .then((html: any) => {
-        app.innerHTML = html;
+  fetch(asignarUrl())
+    .then((response: any) => {
+      if (!response.ok) {
+        throw new Error("No se pudo cargar el HTML");
+      }
+      return response.text();
+    })
+    .then((html: any) => {
+      app.innerHTML = html;
 
-        setTimeout(() => {
-          const targetElement = document.querySelector(currentHash);
-          if (targetElement) {
-            targetElement.scrollIntoView({ behavior: "smooth" });
-          }
-        }, 50);
-      })
-      .catch((error: any) => {
-        console.error("Error al cargar el HTML:", error);
-      });
-  }
+      setTimeout(() => {
+        const targetElement = document.querySelector(currentHash);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 50);
+    })
+    .catch((error: any) => {
+      console.error("Error al cargar el HTML:", error);
+    });
 }
