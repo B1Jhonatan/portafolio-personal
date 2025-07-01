@@ -18,7 +18,7 @@ const proyecto: string = "/proyecto-fullstack";
 function asignarUrl(): string {
   if (roots.includes(pathWithHash)) {
     return `/components-static/portafolio-static/Portafolio.html${currentHash}`;
-  } else if (pathWithHash === proyecto) {
+  } else if (currentPath === proyecto) {
     return "/components-static/proyecto-static/Proyecto-front.html";
   }
   return "";
